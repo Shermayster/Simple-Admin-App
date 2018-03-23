@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { EmailEditorComponent } from './email-editor/email-editor.component';
 import { EmailDisplayComponent } from './email-display/email-display.component';
 import { LoggerComponent } from './logger/logger.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -16,8 +18,11 @@ import { LoggerComponent } from './logger/logger.component';
     LoggerComponent
   ],
   imports: [
-    BrowserModule
+    CommonModule,
+    BrowserModule,
+    FormsModule
   ],
+  exports: [FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
