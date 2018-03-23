@@ -13,8 +13,10 @@ export class EditorComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(value) {
+  onSubmit(value, form) {
     this.addEmail.emit(value);
+    this.emailValue = '';
+    form.resetForm();
   }
 
 }

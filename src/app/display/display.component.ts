@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { EmailData } from '../shared/email.model';
 
 @Component({
   selector: 'app-display',
@@ -12,8 +13,9 @@ export class DisplayComponent implements OnInit {
 
   ngOnInit() { }
 
-  onDelete(email: string) {
-    this.deleteEmail.emit(email);
+  onDelete(email: string, i: number) {
+    const emailData: EmailData = {emailIndex: i, emailName: email};
+    this.deleteEmail.emit(emailData);
   }
 
 }

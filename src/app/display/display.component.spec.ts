@@ -55,6 +55,7 @@ describe('DisplayComponent', () => {
     const deleteButtons = fixture.debugElement.nativeElement.querySelectorAll('.delete-btn');
     deleteButtons[0].click();
     fixture.detectChanges();
-    expect(spy).toHaveBeenCalledWith(emailList[0]);
+    const expectedOutput = {emailIndex: 0, emailName: emailList[0]};
+    expect(spy).toHaveBeenCalledWith(expectedOutput);
   });
 });

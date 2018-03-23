@@ -1,4 +1,8 @@
 
 <app-editor (addEmail)="addEmailToList($event)"></app-editor>
-<app-display [emailList]="emailList"></app-display>
+<app-display
+  [emailList]="emailList"
+  (deleteEmail)="deleteEmailFromList($event)"
+  >
+</app-display>
 

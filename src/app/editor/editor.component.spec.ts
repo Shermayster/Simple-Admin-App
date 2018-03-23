@@ -63,12 +63,13 @@ describe('EditorComponent', () => {
     button.click();
     fixture.detectChanges();
     expect(spy).toHaveBeenCalled();
+    fixture.detectChanges();
   });
 
   it('submit function shoul send output with email value', () => {
     fixture.detectChanges();
     const spy = spyOn(component.addEmail, 'emit');
-    component.onSubmit('test@test.com');
+    component.onSubmit('test@test.com', {resetForm: () => null});
     expect(spy).toHaveBeenCalledWith('test@test.com');
   });
 });

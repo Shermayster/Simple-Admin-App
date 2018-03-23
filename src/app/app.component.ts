@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EmailData } from './shared/email.model';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,9 @@ export class AppComponent {
 
   addEmailToList(email: string): void {
     this.emailList = [...this.emailList, email];
+  }
+
+  deleteEmailFromList(emailData: EmailData): void {
+    this.emailList = this.emailList.filter((email, index) => index !== emailData.emailIndex);
   }
 }

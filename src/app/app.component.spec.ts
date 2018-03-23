@@ -27,4 +27,12 @@ describe('AppComponent', () => {
     component.addEmailToList('test@test.com');
     expect(component.emailList).toEqual(['test@test.com']);
   });
+
+  it('should delete email from list', () => {
+    const emailList = ['test@test.com', 'test2@test2.com'];
+    component.emailList = emailList;
+    const emailData = {emailIndex: 0, emailName: emailList[0]};
+    component.deleteEmailFromList(emailData);
+    expect(component.emailList.length).toBe(1);
+  });
 });
