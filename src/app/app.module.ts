@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { EmailEditorComponent } from './email-editor/email-editor.component';
-import { EmailDisplayComponent } from './email-display/email-display.component';
+import { DisplayComponent } from './display/display.component';
+import { EditorComponent } from './editor/editor.component';
 import { LoggerComponent } from './logger/logger.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -13,8 +13,8 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
-    EmailEditorComponent,
-    EmailDisplayComponent,
+    DisplayComponent,
+    EditorComponent,
     LoggerComponent
   ],
   imports: [

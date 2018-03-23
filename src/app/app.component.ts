@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  emailList: string[] = [];
+
+  addEmailToList(email: string): void {
+    this.emailList = [...this.emailList, email];
+  }
 }

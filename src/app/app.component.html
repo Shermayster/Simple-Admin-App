@@ -1,3 +1,4 @@
 
-<app-email-display></app-email-display>
+<app-editor (addEmail)="addEmailToList($event)"></app-editor>
+<app-display [emailList]="emailList"></app-display>
 

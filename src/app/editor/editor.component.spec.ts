@@ -1,26 +1,26 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmailDisplayComponent } from './email-display.component';
+import { EditorComponent } from './editor.component';
 import { FormsModule, EmailValidator } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 
-describe('EmailDisplayComponent', () => {
-  let component: EmailDisplayComponent;
-  let fixture: ComponentFixture<EmailDisplayComponent>;
+describe('EditorComponent', () => {
+  let component: EditorComponent;
+  let fixture: ComponentFixture<EditorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         FormsModule,
       ],
-      declarations: [ EmailDisplayComponent ]
+      declarations: [ EditorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EmailDisplayComponent);
+    fixture = TestBed.createComponent(EditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -67,7 +67,7 @@ describe('EmailDisplayComponent', () => {
 
   it('submit function shoul send output with email value', () => {
     fixture.detectChanges();
-    const spy = spyOn(component.submit, 'emit');
+    const spy = spyOn(component.addEmail, 'emit');
     component.onSubmit('test@test.com');
     expect(spy).toHaveBeenCalledWith('test@test.com');
   });
