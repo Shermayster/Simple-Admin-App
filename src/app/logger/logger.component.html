@@ -1,3 +1,10 @@
-<p>
-  logger works!
-</p>
+<section>
+  <div *ngFor="let log of logList" [ngSwitch]="log.type">
+    <span class='log-message email-added' *ngSwitchCase="logType.Add">
+      {{log.element}} was added successfully
+    </span>
+    <span class='log-message email-deleted' *ngSwitchCase="logType.Delete">
+      {{log.element}} was deleted successfully
+    </span>
+  </div>
+</section>

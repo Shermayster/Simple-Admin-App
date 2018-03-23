@@ -1,7 +1,9 @@
 <section class="email-display">
+  <h2>Editor</h2>
   <form (ngSubmit)="onSubmit(emailValue, f)" #f="ngForm">
-      <label for="email">Editor</label>
+      <label for="email">Email:</label>
       <input id="email"
+        placeholder="Enter Email"
         type="email"
         [(ngModel)]="emailValue"
         name="email"
