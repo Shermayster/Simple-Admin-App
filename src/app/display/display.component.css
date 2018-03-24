@@ -1,3 +1,4 @@
+/* Table styles */
 table {
   width: 100%;
   max-width: 100%;
@@ -35,12 +36,14 @@ span.email-address {
   vertical-align: sub;
 }
 
-.empty-list {
-  color: #e83e8c;
-}
 .btn-delete {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
   padding: 0 0.175rem;
+}
+
+/* Error message style */
+.empty-list {
+  color: #e83e8c;
 }

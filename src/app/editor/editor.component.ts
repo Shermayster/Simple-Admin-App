@@ -5,13 +5,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './editor.component.html',
   styleUrls: ['./editor.component.css']
 })
-export class EditorComponent implements OnInit {
+export class EditorComponent {
   emailValue: string;
   @Output() addEmail = new EventEmitter();
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   onSubmit(value, form) {
     this.addEmail.emit(value);

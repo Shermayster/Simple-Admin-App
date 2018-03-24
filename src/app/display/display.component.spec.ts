@@ -30,6 +30,8 @@ describe('DisplayComponent', () => {
   });
 
   it('should have table with labels', () => {
+    const emailList = ['test@test.com', 'test2@test2.com'];
+    component.emailList = emailList;
     fixture.detectChanges();
     const table: HTMLTableElement = fixture.debugElement.nativeElement.querySelector('table');
     expect(table).not.toBeNull();
@@ -52,7 +54,7 @@ describe('DisplayComponent', () => {
     const emailList = ['test@test.com', 'test2@test2.com'];
     component.emailList = emailList;
     fixture.detectChanges();
-    const deleteButtons = fixture.debugElement.nativeElement.querySelectorAll('.delete-btn');
+    const deleteButtons = fixture.debugElement.nativeElement.querySelectorAll('.btn-delete');
     deleteButtons[0].click();
     fixture.detectChanges();
     const expectedOutput = {emailIndex: 0, emailName: emailList[0]};

@@ -6,12 +6,9 @@ import { EmailData } from '../shared/email.model';
   templateUrl: './display.component.html',
   styleUrls: ['./display.component.css']
 })
-export class DisplayComponent implements OnInit {
+export class DisplayComponent {
   @Input() emailList: string[] = [];
   @Output() deleteEmail = new EventEmitter();
-  constructor() { }
-
-  ngOnInit() { }
 
   onDelete(email: string, i: number) {
     const emailData: EmailData = {emailIndex: i, emailName: email};

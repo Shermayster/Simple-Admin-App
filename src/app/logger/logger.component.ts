@@ -9,7 +9,5 @@ import { LogData, LogType } from '../shared/log.model';
 export class LoggerComponent {
   @Input() logList: LogData[] = [];
   logType = LogType;
-
-  constructor() { }
 }
 
