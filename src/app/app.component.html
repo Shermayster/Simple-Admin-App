@@ -1,9 +1,11 @@
 
-<h1>Email Manager</h1>
-<app-editor (addEmail)="addEmailToList($event)"></app-editor>
-<app-display
-  [emailList]="emailList"
-  (deleteEmail)="deleteEmailFromList($event)"
-  >
-</app-display>
-<app-logger [logList]="logList"></app-logger>
+<div class="container">
+    <h1>Email Manager</h1>
+    <app-editor (addEmail)="addEmailToList($event)"></app-editor>
+    <app-display
+      [emailList]="emailList"
+      (deleteEmail)="deleteEmailFromList($event)"
+      >
+    </app-display>
+    <app-logger [logList]="logList"></app-logger>
+</div>

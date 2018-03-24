@@ -32,7 +32,7 @@ describe('EditorComponent', () => {
   it('should have Editor label', () => {
     fixture.detectChanges();
     const label: HTMLElement = fixture.debugElement.nativeElement.querySelector('label');
-    expect(label.innerText).toBe('Email');
+    expect(label.innerText).toBe('Email:');
   });
 
   it('should have input element with type email', () => {

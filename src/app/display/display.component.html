@@ -1,20 +1,22 @@
-<section>
-  <h2>Display</h2>
-  <table class="emails-list">
-    <thead>
-        <tr>
-            <th>Email</th>
-            <th>Function</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr *ngIf="!emailList.length" class="empty-list">
-        <td>No emails was added</td>
-      </tr>
-      <tr *ngFor="let email of emailList; let i = index">
-        <td>{{email}}</td>
-        <td><button (click)="onDelete(email, i)" class="delete-btn">Delete</button></td>
-      </tr>
-    </tbody>
-  </table>
+<section class="card">
+  <div class="card-body">
+      <h2>Display</h2>
+      <table class="emails-list">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Function</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="!emailList.length" class="empty-list">
+            <td>No emails was added</td>
+          </tr>
+          <tr *ngFor="let email of emailList; let i = index">
+            <td>{{email}}</td>
+            <td><button (click)="onDelete(email, i)" class="delete-btn">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
 </section>

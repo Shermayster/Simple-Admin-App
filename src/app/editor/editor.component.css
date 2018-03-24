@@ -1,0 +1,14 @@
+label {
+  display: block;
+}
+
+.form-control {
+  max-width: 50vw;
+  margin: 1rem 1rem 1rem 0;
+  display: inline;
+}
+
+small.error-massage {
+  display: block;
+  color: #e83e8c;
+}

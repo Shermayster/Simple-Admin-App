@@ -1,16 +1,18 @@
-<section class="email-display">
-  <h2>Editor</h2>
-  <form (ngSubmit)="onSubmit(emailValue, f)" #f="ngForm">
-      <label for="email">Email:</label>
-      <input id="email"
-        placeholder="Enter Email"
-        type="email"
-        [(ngModel)]="emailValue"
-        name="email"
-        #email="ngModel"
-        email=true
-      >
-      <button type="submit" [disabled]="!email.valid">Send</button>
-      <span class="error-massage" *ngIf="!email.valid && email.touched">email address not valid</span>
-    </form>
+<section class="email-display card">
+  <div class="card-body">
+      <h2>Editor</h2>
+      <form (ngSubmit)="onSubmit(emailValue, f)" #f="ngForm">
+          <label for="email">Email:</label>
+          <input class="form-control" id="email"
+            placeholder="Enter Email"
+            type="email"
+            [(ngModel)]="emailValue"
+            name="email"
+            #email="ngModel"
+            email=true
+          >
+          <button class="btn btn-primary" type="submit" [disabled]="!email.valid">Send</button>
+          <small class="error-massage" *ngIf="!email.valid && email.touched">email address not valid</small>
+        </form>
+  </div>
 </section>

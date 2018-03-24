@@ -15,7 +15,6 @@ export class EditorComponent implements OnInit {
 
   onSubmit(value, form) {
     this.addEmail.emit(value);
-    this.emailValue = '';
     form.resetForm();
   }
 
