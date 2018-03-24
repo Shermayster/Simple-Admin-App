@@ -1,0 +1,46 @@
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+table thead th {
+  vertical-align: bottom;
+  text-align: start;
+  padding-left: 0.75rem;
+}
+
+tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+table tbody td {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  display: table-cell;
+}
+
+span.email-address {
+  padding: .375rem .75rem;
+  vertical-align: sub;
+}
+
+.empty-list {
+  color: #e83e8c;
+}
+.btn-delete {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  padding: 0 0.175rem;
+}

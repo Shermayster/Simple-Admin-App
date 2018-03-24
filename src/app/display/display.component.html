@@ -1,7 +1,7 @@
 <section class="card">
   <div class="card-body">
       <h2>Display</h2>
-      <table class="emails-list">
+      <table *ngIf="emailList.length" class="emails-list">
         <thead>
             <tr>
                 <th>Email</th>
@@ -9,14 +9,16 @@
             </tr>
         </thead>
         <tbody>
-          <tr *ngIf="!emailList.length" class="empty-list">
-            <td>No emails was added</td>
-          </tr>
           <tr *ngFor="let email of emailList; let i = index">
-            <td>{{email}}</td>
-            <td><button (click)="onDelete(email, i)" class="delete-btn">Delete</button></td>
+            <td><span class="email-address">
+                {{email}}
+            </span></td>
+            <td><button (click)="onDelete(email, i)" class="btn btn-delete">Delete</button></td>
           </tr>
         </tbody>
       </table>
+      <div *ngIf="!emailList.length" class="empty-list">
+          No emails to show
+      </div>
   </div>
 </section>

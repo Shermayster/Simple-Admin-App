@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-size: 16px;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -19,6 +23,9 @@
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
+  max-height: 30vh;
+  overflow: auto;
+  margin-bottom: 1rem;
 }
 
 .card-body {
